@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#18273d"><title>江城食堂 · 武汉夜市</title><link rel="stylesheet" href="style.css?v=2.0.3"></head>
+<body>
+<audio id="bgm" loop preload="none" src="assets/bgm.mp3"></audio>
+<section id="title" class="title-screen"><div class="title-window"><div class="seal">武 汉 · 江 城 里</div><p class="eyebrow">一间小店，慢慢长成江城名店。</p><h1>江城食堂</h1><div class="title-pixel" aria-hidden="true"><span class="title-house"></span></div><p class="title-sub">食堂经营篇 · 从厨房到街坊的餐桌</p><button id="continue" class="primary">继续经营</button><button id="new" class="cream">新开食堂</button><div class="title-links"><button id="load">读取存档</button><button id="title-music">♫ 音乐</button></div><small>三个本地存档 · 支持备份与恢复</small></div></section>
+<main id="game" hidden>
+<header><div class="brand"><div><small>武汉 · 江城里</small><h1>江城食堂</h1></div><div class="head-actions"><button id="music" aria-label="切换音乐">♫</button><button id="help" aria-label="经营手册">?</button><button id="save-menu" aria-label="存档管理">存档</button></div></div><div class="resources"><span>资金 <b id="cash"></b></span><span>来客 <b id="total-guests"></b></span><span>菜谱 <b id="dish-count"></b></span></div><div class="calendar"><b id="date"></b><span id="clock"></span><button id="pause">暂停</button><button id="speed">×1</button></div></header>
+<nav id="stores" class="store-tabs" aria-label="门店切换"></nav>
+<button id="objective" class="objective"></button>
+<section class="scene"><canvas id="world" width="720" height="500" aria-label="食堂地图，点选家具可查看，建造模式下点地面选址"></canvas><div id="scene-tag" class="scene-tag"></div><div id="scene-stats" class="scene-stats"></div><button id="placement-cancel" hidden>取消摆放</button></section>
+<div id="projects" class="projects" hidden></div>
+<section class="operations"><div id="shop-info"></div><button id="report-button">月度账本 ›</button></section>
+<button id="news-button" class="news-button"></button>
+<nav class="bottom-nav" aria-label="经营操作"><button data-panel="build"><i>▦</i>布置</button><button data-panel="menu"><i>▤</i>菜品</button><button data-panel="staff"><i>♟</i>员工</button><button data-panel="plans"><i>▧</i>计划</button><button data-panel="book"><i>▣</i>图鉴</button></nav>
+<footer><span id="save-status">本机自动保存</span><span>食堂经营版 2.0.3</span></footer>
+</main>
+<div id="shade" hidden></div><section id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden><div class="sheet-head"><div><small id="sheet-kicker">江城里 · 经营手记</small><h2 id="sheet-title"></h2></div><button id="close" aria-label="关闭">×</button></div><div id="sheet-body"></div></section>
+<section id="message" class="message" role="alertdialog" aria-modal="true" aria-labelledby="message-title" hidden><div class="advisor">江</div><div><small>掌柜手记</small><h2 id="message-title"></h2><p id="message-text"></p><button id="message-action" class="primary" hidden>去看看</button><button id="message-ok">知道了</button></div></section>
+<script src="data.js?v=2.0.3"></script><script src="engine.js?v=2.0.3"></script><script src="world.js?v=2.0.3"></script><script src="app.js?v=2.0.3"></script>
+</body></html>
